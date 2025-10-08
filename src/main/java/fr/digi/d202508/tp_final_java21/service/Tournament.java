@@ -42,9 +42,9 @@ public class Tournament {
             currentRound = round;
 
             System.out.println("\n╔════════════════════════════════════════════════════════╗");
-            System.out.printf("║              MANCHE %d / %d                              ║%n",
+            System.out.printf(   "║              MANCHE %d / %d                            ║%n",
                     round, totalRounds);
-            System.out.println("╚════════════════════════════════════════════════════════╝");
+            System.out.println(  "╚════════════════════════════════════════════════════════╝");
 
             // Create and run a single race
             Race race = new Race();
@@ -99,7 +99,7 @@ public class Tournament {
     private void displayTournamentIntro() {
         display.clearConsole();
         System.out.println("╔════════════════════════════════════════════════════════╗");
-        System.out.println("║              MODE TOURNOI MULTI-MANCHES               ║");
+        System.out.println("║              MODE TOURNOI MULTI-MANCHES                ║");
         System.out.println("╚════════════════════════════════════════════════════════╝");
         System.out.println();
         System.out.println("  Configuration du tournoi:");
@@ -118,8 +118,8 @@ public class Tournament {
      */
     private void displayInterimStandings() {
         System.out.println("\n╔════════════════════════════════════════════════════════╗");
-        System.out.println("║              CLASSEMENT PROVISOIRE                    ║");
-        System.out.println("╚════════════════════════════════════════════════════════╝");
+        System.out.println("║              CLASSEMENT PROVISOIRE                       ║");
+        System.out.println("╚══════════════════════════════════════════════════════════╝");
 
         List<RaceStatistics.AnimalStats> standings = statistics.getAllStatsSortedByWins();
         System.out.println("\nAprès " + currentRound + " manche(s):");
@@ -144,7 +144,7 @@ public class Tournament {
     private void displayFinalTournamentResults() {
         display.clearConsole();
         System.out.println("╔════════════════════════════════════════════════════════╗");
-        System.out.println("║            RÉSULTATS FINAUX DU TOURNOI                ║");
+        System.out.println("║            RÉSULTATS FINAUX DU TOURNOI                 ║");
         System.out.println("╚════════════════════════════════════════════════════════╝");
 
         // Display comprehensive statistics
@@ -159,6 +159,6 @@ public class Tournament {
                     champion.getWins(), totalRounds, champion.getWinRate());
         }
 
-        System.out.println("\n\nMerci d'avoir participé au tournoi! 🎉");
+        System.out.println("\n\nMerci d'avoir participé au tournoi! ");
     }
 }
